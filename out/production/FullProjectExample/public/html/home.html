@@ -1,0 +1,70 @@
+<div class="container main-container">
+
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <div class="panel-title"> Address Form</div>
+        </div>
+        <div class="panel-body">
+            <div class="row row-container">
+
+
+                <div class="col-md-3">
+                    <div>
+                        <label for="firstName" class="text text-primary">First Name</label>
+                        <input class="form-control" type="text" id="firstName" ng-model="firstName"/>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="lastName" class="text text-primary">Last Name</label>
+                        <input class="form-control" type="text" id="lastName" ng-model="lastName"/>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div>
+                        <label for="address" class="text text-primary">Address</label>
+                        <input class="form-control" type="textarea" id="address" ng-model="address"/>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <label class="text text-primary"></label>
+
+                    <div class="btn btn-primary fa fa-plus" ng-click="submit()"
+                         style="margin-top: 25px; width: 34px;"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <div class="panel-title"> Data</div>
+        </div>
+        <div class="panel-body">
+            <div class="row row-container" ng-hide="showTable()">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr class="active">
+                            <th class="active"> First Name</th>
+                            <th class="active"> Last Name</th>
+                            <th class="active"> Address</th>
+                        </tr>
+                        <tr ng-repeat="row in rowData">
+                            <td>{{row.firstName}}</td>
+                            <td>{{row.lastName}}</td>
+                            <td>{{row.address}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-container">
+        <div class="col-md-offset-10">
+            <div class="btn btn-primary form-control " ng-click="save()">Save</div>
+        </div>
+    </div>
+</div>
